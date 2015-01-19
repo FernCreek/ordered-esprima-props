@@ -31,6 +31,7 @@ module.exports = (function() {
     var VariableDeclarators = id;
     var Properties = id;
     var SwitchCases = id;
+    var Specifier = id;
 
     return {
         ArrayExpression: [Expressions("elements")],
@@ -45,6 +46,9 @@ module.exports = (function() {
         DebuggerStatement: [],
         DoWhileStatement: [Statement("body"), Expression("test")],
         EmptyStatement: [],
+        ExportBatchSpecifier: [],
+        ExportDeclaration: [VariableDeclarationOrExpression("declaration"), Specifier("specifier")],
+        ExportSpecifier: [],
         ExpressionStatement: [Expression("expression")],
         ForInStatement: [VariableDeclarationOrIdentifier("left"), Expression("right"), Statement("body")],
         ForStatement: [VariableDeclarationOrExpression("init"), Expression("test"), Expression("update"), Statement("body")],
@@ -52,6 +56,9 @@ module.exports = (function() {
         FunctionExpression: [Identifier("id"), Identifiers("params"), BlockStatement("body")],
         Identifier: [],
         IfStatement: [Expression("test"), Statement("consequent"), Statement("alternate")],
+        ImportBatchSpecifier: [Identifier("name")],
+        ImportDeclaration: [Specifier("specifiers")],
+        ImportSpecifier: [Identifier("id"), Identifier("name")],
         LabeledStatement: [Identifier("label"), Statement("body")],
         Literal: [],
         LogicalExpression: [Expression("left"), Expression("right")],
