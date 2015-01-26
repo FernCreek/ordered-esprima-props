@@ -38,17 +38,17 @@ module.exports = (function() {
     return {
         ArrayExpression: [Expressions("elements")],
         //ArrayPattern: [], // TODO
-        ArrowFunctionExpression: [Identifier("params"), IdentifierLiteralOrExpression("defaults"), Identifier("rest"), BlockStatement("body")],
+        //ArrowFunctionExpression: [Identifier("params"), IdentifierLiteralOrExpression("defaults"), Identifier("rest"), BlockStatement("body")],
         AssignmentExpression: [Lvalue("left"), Expression("right")],
-        AssignmentPattern: [Pattern("left"), Expression("right")],
+        //AssignmentPattern: [Pattern("left"), Expression("right")],
         BinaryExpression: [Expression("left"), Expression("right")],
         BlockStatement: [Statements("body")],
         BreakStatement: [Identifier("label")],
         CallExpression: [Expression("callee"), Expressions("arguments")],
         CatchClause: [Identifier("param"), BlockStatement("body")],
-        ClassBody: [BlockStatement("body")],
-        ClassDeclaration: [Identifier("id"), Identifier("superClass"), BlockStatement("body")],
-        ClassExpression: [Identifier("id"), Identifier("superClass"), BlockStatement("body")],
+        //ClassBody: [BlockStatement("body")],
+        //ClassDeclaration: [Identifier("id"), Identifier("superClass"), BlockStatement("body")],
+        //ClassExpression: [Identifier("id"), Identifier("superClass"), BlockStatement("body")],
         //ComprehensionBlock: [], // TODO
         //ComprehensionExpression: [], // TODO
         ConditionalExpression: [Expression("test"), Expression("consequent"), Expression("alternate")],
@@ -74,10 +74,10 @@ module.exports = (function() {
         Literal: [],
         LogicalExpression: [Expression("left"), Expression("right")],
         MemberExpression: [Expression("object"), Identifier("property")],
-        MethodDefinition: [Identifier("key"), Expression("value")],
+        //MethodDefinition: [Identifier("key"), Expression("value")],
         NewExpression: [Expression("callee"), Identifiers("arguments")],
         ObjectExpression: [Properties("properties")],
-        ObjectPattern: [Properties("properties")],
+        //ObjectPattern: [Properties("properties")],
         //ParenthesizedExpression: [], // TODO: should this be included?
         Program: [Statements("body")],
         Property: [Identifier("key"), Expression("value")],
