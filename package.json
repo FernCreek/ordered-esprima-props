@@ -1,6 +1,6 @@
 {
   "name": "ordered-esprima-props",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lexical ordering of property names per Esprima AST type",
   "main": "ordered-esprima-props.js",
   "repository": {
